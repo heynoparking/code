@@ -1,6 +1,3 @@
-import say
-
-
-
-
-say.hello.se()
+import say.hello
+import say.bye
+import say.sorry
