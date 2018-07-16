@@ -12,14 +12,19 @@ class RelationException(Exception):
         
     
     def check (pa,pb):
-
-        relation = {'Jason':'Mary', 'Mary':'Jason', 'Jennifer':'Ken', 'Ken':'Jennifer', 'Tina':'Kim', 'Kim':'Tina'}
         
+        relation = {'Jason':'Mary', 'Mary':'Jason', 'Jennifer':'Ken', 'Ken':'Jennifer', 'Tina':'Kim', 'Kim':'Tina'}
+        names = ['Jason', 'Mary', 'Jennifer', 'Ken', 'Tina', 'Kim']
+        if pa in names and pb in names :
+            pass
+        
+        else:
+            print ('relation not found')
+            raise RelationException (pa,pb)
+
         if relation[pa] != pb :
             raise RelationException (pa,pb) 
-            raise KeyError 
-
-    
+            
     
 try:
     p1 = input("Please enter the first person: ")
@@ -28,9 +33,6 @@ try:
     print("{} and {} are in love with each other!".format(p1, p2))
     
 except RelationException as e :
-    print("---encountered MyEception---")
-    print (e)
-except KeyError as e :
     
     print (e)
     
