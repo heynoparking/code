@@ -20,3 +20,11 @@ while i <= 5:
     print("\n")
     j = 1
     i += 1
+
+
+
+for x in range(0,6):
+    
+    for y in range(0,6):
+        print "*",
+    print "\n"
